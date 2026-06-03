@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Code Review focado em segurança",
+      "slug": "code-review-seguranca",
+      "body": "Você é um revisor de código sênior especializado em segurança de aplicações.\n\nAnalise o trecho de código abaixo e identifique todas as vulnerabilidades presentes.\n\nPara cada problema encontrado, informe:\n- Classificação: [CRÍTICO] [ALTO] [MÉDIO] [BAIXO]\n- Descrição do problema\n- Linha ou trecho afetado\n- Sugestão de correção com exemplo de código\n\nCategorias a verificar:\n1. Injeção (SQL, XSS, Command Injection)\n2. Autenticação e gerenciamento de sessão\n3. Exposição de dados sensíveis\n4. Controle de acesso quebrado\n5. Dependências com vulnerabilidades conhecidas\n\n---\n[COLE O CÓDIGO AQUI]\n---",
+      "tags": ["segurança", "code-review", "backend"],
+      "userId": 1,
+      "likes": 47,
+      "createdAt": "2025-05-18T10:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Gerador de documentação para API REST",
+      "slug": "gerador-documentacao-api-rest",
+      "body": "Você é um technical writer especializado em APIs.\n\nGere a documentação completa para o endpoint abaixo seguindo o padrão OpenAPI 3.0.\n\nInclua obrigatoriamente:\n- Descrição do endpoint em linguagem clara\n- Parâmetros (path, query, body) com tipos e validações\n- Exemplos de request e response para sucesso e cada erro\n- Códigos HTTP possíveis e quando cada um ocorre\n- Notas de segurança e autenticação necessária\n\nEndpoint:\n[COLE A ASSINATURA DO ENDPOINT AQUI]\n\nLinguagem de saída: pt-BR\nFormato: Markdown com blocos de código YAML",
+      "tags": ["documentação", "api", "rest", "openapi"],
+      "userId": 2,
+      "likes": 32,
+      "createdAt": "2025-05-20T09:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Refatoração incremental de código legado",
+      "slug": "refatoracao-incremental-legado",
+      "body": "Você é um engenheiro sênior com experiência em modernização de sistemas legados.\n\nDado o código abaixo, crie um plano de refatoração incremental que:\n1. Mantenha o sistema funcionando em produção durante todo o processo\n2. Identifique dependências e acoplamentos críticos\n3. Sugira a ordem segura de refatoração (menor risco primeiro)\n4. Proponha abstrações que facilitem cobertura de testes\n5. Estime o risco de cada etapa\n\nPara cada etapa do plano:\n- Descrição clara do que muda\n- Risco: BAIXO / MÉDIO / ALTO\n- Como validar antes de avançar para a próxima etapa\n- Possível rollback em caso de problema\n\n---\n[COLE O CÓDIGO LEGADO AQUI]\n---",
+      "tags": ["refatoração", "legado", "arquitetura", "backend"],
+      "userId": 1,
+      "likes": 28,
+      "createdAt": "2025-05-22T16:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Debug sistemático de bugs difíceis",
+      "slug": "debug-sistematico-bugs-dificeis",
+      "body": "Você é um engenheiro de debugging experiente.\n\nAnalise o bug report abaixo e conduza uma investigação sistemática:\n\n1. HIPÓTESES\n   Liste as 3-5 causas mais prováveis em ordem de probabilidade\n\n2. EXPERIMENTOS\n   Para cada hipótese, sugira como confirmá-la ou descartá-la com o menor esforço possível\n\n3. DIAGNÓSTICO\n   Com base nos dados disponíveis, aponte a causa raiz mais provável e justifique\n\n4. CORREÇÃO\n   Sugira a solução com exemplo de código antes e depois\n\n5. PREVENÇÃO\n   Como evitar esse tipo de bug no futuro? Teste, lint, tipagem, revisão?\n\n---\nBug report:\n[DESCREVA O COMPORTAMENTO ESPERADO vs OBSERVADO]\n[COLE LOGS OU STACK TRACE SE DISPONÍVEIS]\n[AMBIENTE: OS, runtime, versão]\n---",
+      "tags": ["debug", "problem-solving", "engenharia"],
+      "userId": 4,
+      "likes": 19,
+      "createdAt": "2025-05-24T11:45:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Gerador de testes unitários com edge cases",
+      "slug": "gerador-testes-unitarios-edge-cases",
+      "body": "Você é um engenheiro de qualidade especializado em testes.\n\nPara a função abaixo, gere um conjunto completo de testes unitários que inclua:\n\n- Happy path: comportamento esperado com entradas válidas\n- Edge cases: limites de tipos, strings vazias, arrays vazios, zero\n- Entradas inválidas: null, undefined, tipos errados\n- Comportamento assíncrono (se aplicável)\n- Cenários de erro e exceções esperadas\n\nPara cada teste:\n- Nome descritivo no padrão: deve_[resultado]_quando_[condição]\n- Seções Arrange / Act / Assert claramente separadas\n- Comentário de uma linha explicando por que o caso importa\n\nFramework: [JEST / VITEST / PYTEST — especifique]\n\n---\n[COLE A FUNÇÃO AQUI]\n---",
+      "tags": ["testes", "unit-test", "qualidade", "tdd"],
+      "userId": 2,
+      "likes": 35,
+      "createdAt": "2025-05-26T14:20:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Análise de performance de queries SQL",
+      "slug": "analise-performance-queries-sql",
+      "body": "Você é um DBA especializado em otimização de performance.\n\nAnalise a query SQL abaixo e forneça:\n\n1. ANÁLISE\n   O que a query está fazendo (em português simples)\n   Estimativa de custo e gargalos potenciais\n\n2. PROBLEMAS IDENTIFICADOS\n   - Falta de índices nos campos filtrados/join\n   - N+1 queries ou subqueries correlacionadas\n   - Full table scans desnecessários\n   - Ordenação sem índice\n\n3. VERSÃO OTIMIZADA\n   Query reescrita com explicação de cada mudança\n   Índices recomendados (CREATE INDEX com justificativa)\n\n4. VALIDAÇÃO\n   Como medir a melhoria com EXPLAIN ANALYZE\n   Métricas esperadas antes e depois\n\n---\n[COLE A QUERY SQL AQUI]\n---\n\nBanco de dados: [PostgreSQL / MySQL / SQLite]\nVolume estimado de registros na tabela principal: [INFORME]",
+      "tags": ["sql", "performance", "banco-de-dados", "postgresql"],
+      "userId": 3,
+      "likes": 23,
+      "createdAt": "2025-05-28T08:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Revisão de Infrastructure as Code (Terraform)",
+      "slug": "revisao-infrastructure-as-code-terraform",
+      "body": "Você é um engenheiro DevOps especializado em Infrastructure as Code.\n\nRevise o arquivo Terraform abaixo com foco em:\n\nSEGURANÇA\n- Credenciais expostas ou hardcoded\n- Permissões IAM excessivas (principle of least privilege)\n- Recursos publicamente acessíveis sem justificativa\n- Criptografia ausente em storage e transmissão\n\nBOAS PRÁTICAS\n- Uso adequado de variáveis, locals e outputs\n- Remote state e locking configurados\n- Módulos para evitar repetição\n- Naming conventions consistentes\n- Tagging obrigatório para rastreabilidade\n\nCUSTO\n- Recursos superdimensionados para o workload\n- Alternativas mais econômicas (ex: spot instances)\n- Recursos órfãos ou não utilizados\n\nPara cada problema: localização exata, impacto e sugestão de correção com código.\n\n---\n[COLE O ARQUIVO .tf AQUI]\n---",
+      "tags": ["iac", "terraform", "devops", "aws"],
+      "userId": 3,
+      "likes": 14,
+      "createdAt": "2025-05-29T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Explicador adaptativo de conceitos de programação",
+      "slug": "explicador-adaptativo-conceitos-programacao",
+      "body": "Você é um professor de programação com habilidade de adaptar explicações a qualquer nível de conhecimento.\n\nExplique o conceito abaixo de três formas progressivas:\n\nNÍVEL 1 — INICIANTE\nUse analogia com situações do dia a dia.\nSem jargão técnico. Objetivo: criar intuição, não precisão.\n\nNÍVEL 2 — INTERMEDIÁRIO\nMostre o problema que o conceito resolve.\nUse exemplos práticos de código simples e comentado.\n\nNÍVEL 3 — AVANÇADO\nAprofunde nos detalhes de implementação interna.\nCompare com alternativas e discuta trade-offs reais.\n\nFinalize com:\n- 3 perguntas para autoavaliação (com gabarito)\n- 2 exercícios práticos progressivos\n- 1 recurso para ir além (documentação oficial ou paper)\n\nConceito: [INSIRA O CONCEITO AQUI]\nLinguagem preferida para exemplos: [Python / JavaScript / outro]",
+      "tags": ["educação", "aprendizado", "ia", "engenharia"],
+      "userId": 4,
+      "likes": 41,
+      "createdAt": "2025-05-30T15:10:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "devlucas",
+      "name": "Lucas Ferreira",
+      "bio": "Backend dev apaixonado por Go e sistemas distribuídos. Escrevendo prompts que fazem a IA pensar como engenheiro.",
+      "joinedAt": "2025-01-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "username": "ana_frontend",
+      "name": "Ana Costa",
+      "bio": "Frontend engineer · CSS enthusiast · Design Systems. Uso IA como par de programação, não como oráculo.",
+      "joinedAt": "2025-02-05T14:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "username": "mrkm",
+      "name": "Marcos Kim",
+      "bio": "DevOps e SRE · Kubernetes · Open Source. Infraestrutura como código, prompts como documentação viva.",
+      "joinedAt": "2025-03-12T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "username": "prompter_ai",
+      "name": "Fernanda Dias",
+      "bio": "Prompt engineer · IA generativa aplicada ao desenvolvimento. Fundadora da comunidade Promptdown.",
+      "joinedAt": "2025-04-01T11:00:00.000Z"
+    }
+  ]
+}

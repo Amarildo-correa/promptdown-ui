@@ -1,0 +1,14 @@
+{
+  "name": "promptdown-ui",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Promptdown UI — frontend prototype com JSON Server",
+  "scripts": {
+    "api": "node api/server.js",
+    "serve": "npx serve public -p 5173 --no-clipboard",
+    "dev": "npm run api"
+  },
+  "dependencies": {
+    "json-server": "0.17.4"
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Promptdown</title>
+        <link rel="icon" type="image/png" href="img/ico.svg" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+        <!-- Tabler Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+        <!-- Design System -->
+        <link rel="stylesheet" href="css/tokens.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <!-- Sidebar -->
+            <aside class="panel sidebar">
+                <div class="sidebar__logo">
+                    <a href="#/feed" class="logo-link">
+                        <span class="logo-text">Promptdown</span>
+                    </a>
+                </div>
+
+                <nav class="sidebar__nav">
+                    <a href="#/feed" class="nav-item" data-route="feed">
+                        <i class="ti ti-layout-list"></i>
+                        <span>Feed público</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar__footer">
+                    <span class="sidebar__version">v0.1.0 · prototype</span>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <main class="panel content" id="app">
+                <!-- Views rendered by router -->
+            </main>
+        </div>
+
+        <script type="module" src="js/app.js"></script>
+    </body>
+</html>
