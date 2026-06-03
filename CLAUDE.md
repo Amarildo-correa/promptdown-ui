@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Repositório
+
+https://github.com/Amarildo-correa/promptdown-ui
+
 ## Comandos de Desenvolvimento
 
 Para rodar localmente, são necessários dois terminais:
