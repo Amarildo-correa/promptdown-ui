@@ -22,15 +22,18 @@ npm install
 npm run api
 ```
 
-Acessar: http://localhost:3001
-
-Ou via CLI:
+**Terminal 2 — Frontend (porta 5173)**
 
 ```bash
-npx serve public -p 5173
+npm run serve
 ```
 
-Acessar: http://localhost:5173
+| Dispositivo | URL de acesso            |
+| ----------- | ------------------------ |
+| PC          | `http://localhost:5173`  |
+| Celular     | `http://<IP-do-PC>:5173` |
+
+Para acessar no celular, PC e celular precisam estar na mesma rede Wi-Fi. Descubra o IP do PC digitando `ipconfig` no terminal. O `api.js` detecta o host automaticamente — nenhuma configuração extra necessária.
 
 ---
 

@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 const server = jsonServer.create();
 const router = jsonServer.router(join(__dirname, "database.json"));
-const middlewares = jsonServer.defaults({ noCors: false, logger: true });
+const middlewares = jsonServer.defaults({ noCors: false, logger: true, static: '__no_static__' });
 
 server.use(middlewares);
 server.use(router);
@@ -28,7 +28,6 @@ server.listen(PORT, () => {
     console.log("  GET /users/:id                      usuário individual");
     console.log("  GET /users?username=:username       usuário por username");
     console.log("");
-    console.log("  Sirva o frontend com Live Server no VS Code (public/index.html)");
-    console.log("  ou: npx serve public -p 5173");
+    console.log("  Frontend (porta 5173): npm run serve");
     console.log("");
 });

@@ -32,7 +32,7 @@ SPA vanilla JavaScript com roteamento por hash e um mock de API via JSON Server.
 
 - **router.js** — Roteador hash customizado. Converte padrões com params (`:id`, `:username`) em regex. Eventos `hashchange` disparam a resolução das rotas.
 - **app.js** — Registra as três rotas (`#/feed`, `#/post/:id`, `#/profile/:username`) e controla o estado ativo do nav lateral.
-- **api.js** — Camada HTTP sobre JSON Server. Base URL: `http://localhost:3001`. Usa `_expand=user` para embutir dados relacionais em uma única requisição.
+- **api.js** — Camada HTTP sobre JSON Server. Base URL dinâmica: `http://${window.location.hostname}:3001` — funciona em localhost e pelo IP da rede local sem configuração manual. Usa `_expand=user` para embutir dados relacionais em uma única requisição.
 - **utils.js** — `formatDate()` (ISO → pt-BR), `truncate()` (preserva fronteiras de palavras), `renderLoading()`, `renderError()`.
 - **views/** — Cada view faz fetch assíncrono, exibe loading/error e injeta HTML string no DOM. Listeners de eventos são adicionados após o render.
 
